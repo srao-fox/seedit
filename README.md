@@ -5,14 +5,14 @@ One-shot setup for a new seedbox user: Python, Playwright and VS Code. No root n
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/srao-fox/seedit/main/setup-all.sh | bash
+curl -fsSL https://raw.githubusercontent.com/srao-fox/seedit/main/seedit.sh | bash
 ```
 
 Or:
 
 ```bash
 git clone https://github.com/srao-fox/seedit.git
-bash seedit/setup-all.sh
+bash seedit/seedit.sh
 ```
 
 ## What you get
@@ -35,7 +35,7 @@ Then open **https://vscode.dev/tunnel/seedbox**. In VS Code, choose **Python: Se
 ## Options
 
 ```bash
-PY_VERSION=3.11 BROWSERS="chromium firefox" TUNNEL_NAME=mybox bash setup-all.sh
+PY_VERSION=3.11 BROWSERS="chromium firefox" TUNNEL_NAME=mybox bash seedit.sh
 ```
 
 | Variable | Default |
@@ -49,7 +49,7 @@ PY_VERSION=3.11 BROWSERS="chromium firefox" TUNNEL_NAME=mybox bash setup-all.sh
 ## Troubleshooting
 
 - **Playwright fails to launch:** the script lists any missing system libraries. Ask your provider to install them, and always launch with `args=["--no-sandbox"]`.
-- **`$'\r': command not found`:** run `sed -i 's/\r$//' setup-all.sh`.
+- **`$'\r': command not found`:** run `sed -i 's/\r$//' seedit.sh`.
 - **The tunnel stopped:** re-run the script. It skips installs and restarts the tunnel.
 
 ## License
